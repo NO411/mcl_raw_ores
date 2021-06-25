@@ -1,4 +1,5 @@
-local function register_raw_ore(ore, description, n)
+local function register_raw_ore(description, n)
+    local ore = description:lower()
     local n = n or ""
     local raw_ingot = "mcl_raw_ores:raw_"..ore
     local texture = "mcl_raw_ores_raw_"..ore
@@ -45,8 +46,11 @@ local function register_raw_ore(ore, description, n)
         }
     })
 end
-register_raw_ore("iron", "Iron", "n")
-register_raw_ore("gold", "Gold")
+register_raw_ore("Iron", "n")
+register_raw_ore("Gold")
+
+
+
 
 
 
